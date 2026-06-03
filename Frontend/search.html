@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Vehicle - Fuel QR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Fuel QR System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="view.html">View All</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="search.html">Search</a></li>
+                    <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
+                    <li class="nav-item"><a class="nav-link" href="delete.html">Delete</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card mt-0">
+                    <div class="card-header text-center">
+                        <h4>Search Vehicles</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="message-box" class="alert text-center" role="alert"></div>
+
+                        <div class="row mb-4 align-items-end">
+                            <div class="col-md-4">
+                                <label for="searchBy" class="form-label">Search By:</label>
+                                <select id="searchBy" class="form-select">
+                                    <option value="regno">Registration Number</option>
+                                    <option value="firstname">Owner First Name</option>
+                                    <option value="lastname">Owner Last Name</option>
+                                    <option value="email">Owner Email</option>
+                                    <option value="station">Nearest Fuel Station</option>
+                                    <option value="fueltype">Fuel Type</option>
+                                    <option value="nic">Owner NIC</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="searchTerm" class="form-label">Search Term:</label>
+                                <input type="text" id="searchTerm" class="form-control" placeholder="Enter keyword to search...">
+                            </div>
+                            <div class="col-md-2">
+                                <button id="search-btn" class="btn btn-primary w-100">Search</button>
+                            </div>
+                        </div>
+
+                       
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover mt-3">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Reg No</th>
+                                        <th>Owner Name</th>
+                                        <th>Email</th>
+                                        <th>Nearest Station</th>
+                                        <th>Fuel Type</th>
+                                        <th>NIC</th>
+                                        <th>Vehicle Model</th>
+                                        <th>QR Code</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="vehicles-table-body">
+                                    <tr>
+                                        <td colspan="9" class="text-center">Enter search criteria above and click Search</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
